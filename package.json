@@ -1,0 +1,13 @@
+{
+  "name": "cryptoindicator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "http": "0.0.0",
+    "technicalindicators": "^1.1.11"
+  }
+}
