@@ -62,6 +62,13 @@ app.post('/:indicator', (req, response) => {
             })
 
             break;
+        case 'rsi':
+            content.result = ti.RSI.calculate({
+                values: formatCandles(req.body).close,
+                period: 14,
+            })
+
+            break;
         default:
             content.error = 'unknown indicator'
     }

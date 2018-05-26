@@ -91,3 +91,9 @@ curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:
 ```
 curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/macd"
 ```
+
+### RSI
+
+```
+curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/rsi"
+```
