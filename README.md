@@ -23,6 +23,7 @@ node index.js 8080
 Download some candles from live market and post them to the webserver
 
 Some Urls:
+
 ```
 https://api.bitfinex.com/v2/candles/trade:1m:tBTCUSD/hist?limit=500
 
@@ -53,47 +54,55 @@ Candles must be formatted as the common why in a numeric array whereas newest ca
 
 ## Indicators
 
+### All
+
+Provides all common used indicators
+
+```
+curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/all"
+```
+
 ### EMA
 
 ```
-curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/ema"
-curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/ema?period=200"
+curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/indicator/ma"
+curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/indicator/ema?period=200"
 ```
 
 ### SMA
 
 ```
-curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/sma"
-curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/sma?period=200"
+curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/indicator/sma"
+curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/indicator/sma?period=200"
 
 ```
 
 ### Bollinger Bands
 
 ```
-curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/bollinger_bands"
+curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/indicator/bollinger_bands"
 ```
 
 ### Stochastic RSI
 
 ```
-curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/stoch_rsi"
+curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/indicator/stoch_rsi"
 ```
 
 ### Stochastic
 
 ```
-curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/stoch"
+curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/indicator/stoch"
 ```
 
 ### MACD
 
 ```
-curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/macd"
+curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/indicator/macd"
 ```
 
 ### RSI
 
 ```
-curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/rsi"
+curl -H "Content-Type: application/json" --data @candles.json "http://127.0.0.1:8080/indicator/rsi"
 ```
